@@ -1,0 +1,41 @@
+<!DOCTYPE validators PUBLIC
+        "-//Apache Struts//XWork Validator 1.0.2//EN"
+        "http://struts.apache.org/dtds/xwork-validator-1.0.2.dtd">
+
+<validators>
+
+	<!-- For page validation. Base on String to validate -->
+	<!-- Set short-circuit validate: If the current validation cannot pass, 
+		the rest of process will not operate -->
+	<field name="age">
+		<field-validator type="conversion" short-circuit="true">
+			<message>Conversion Error Occurred</message>
+
+		</field-validator>
+
+
+		<field-validator type="int">
+			<param name="min">20</param>
+			<param name="max">50</param>
+			<message>~~Age needs to be between ${min} and ${max}</message>
+
+		</field-validator>
+
+
+		<!-- Test non-String validation -->
+
+
+
+	</field>
+
+
+	<validator type="expression">
+		<param name="expression"><![CDATA[password==password2]]></param>
+		<message>Password does not equal to password2</message>
+
+
+	</validator>
+
+
+
+</validators>
