@@ -24,6 +24,12 @@
 		Password: <s:password name="password"></s:password>
 		Password2: <s:password name="password2"></s:password>
 		
+		Count: <s:textfield name="count"></s:textfield>
+		<s:fielderror fieldName="count"></s:fielderror>
+		
+		idCard: <s:textfield name="idCard"></s:textfield>
+		<s:fielderror fieldName="idCard"></s:fielderror>
+		
 		<s:submit></s:submit>
 
 	</s:form>

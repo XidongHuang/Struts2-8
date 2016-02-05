@@ -10,11 +10,24 @@ public class TestValidationAction extends ActionSupport {
 	private static final long serialVersionUID = 1L;
 
 	
-	private int age;
+	private Integer age;
 	
 	private String password;
 	private String password2;
 
+	private String idCard;
+	
+	public String getIdCard() {
+		return idCard;
+	}
+
+
+	public void setIdCard(String idCard) {
+		this.idCard = idCard;
+	}
+
+	private Integer count;
+	
 	public String getPassword() {
 		return password;
 	}
@@ -35,12 +48,22 @@ public class TestValidationAction extends ActionSupport {
 	}
 
 
-	public int getAge() {
+	public Integer getAge() {
 		return age;
 	}
 
 
-	public void setAge(int age) {
+	public Integer getCount() {
+		return count;
+	}
+
+
+	public void setCount(Integer count) {
+		this.count = count;
+	}
+
+
+	public void setAge(Integer age) {
 		this.age = age;
 	}
 	

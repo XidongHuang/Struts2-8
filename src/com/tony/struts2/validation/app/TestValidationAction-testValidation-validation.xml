@@ -17,7 +17,7 @@
 		<field-validator type="int">
 			<param name="min">20</param>
 			<param name="max">50</param>
-			<message>~~Age needs to be between ${min} and ${max}</message>
+			<message key="error.int"></message>
 
 		</field-validator>
 
@@ -28,6 +28,20 @@
 
 	</field>
 
+	<field name="count">
+		<field-validator type="int">
+			<param name="min">1</param>
+			<param name="max">10</param>
+			<message key="error.int"></message>
+		</field-validator>
+	</field>
+	
+	<field name="idCard">
+		<field-validator type="idcard">
+			
+			<message>It is NOT a idCard!</message>
+		</field-validator>
+	</field>
 
 	<validator type="expression">
 		<param name="expression"><![CDATA[password==password2]]></param>
